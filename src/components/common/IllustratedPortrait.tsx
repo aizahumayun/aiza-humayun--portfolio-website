@@ -54,8 +54,8 @@ export const IllustratedPortrait: React.FC<IllustratedPortraitProps> = ({
         aria-label="Animated technology skills illustration"
       >
         <div className="absolute inset-[8%] rounded-[2.5rem] rotate-3 bg-[#61DAFB]/5 dark:bg-[#16233A]" />
-        <div className="absolute inset-[13%] rounded-[2rem] border border-[#FF8500]/20 bg-white/55 shadow-inner dark:bg-[#111D32]/70" />
-        <div className="absolute z-[1] flex h-[38%] w-[48%] flex-col justify-between rounded-2xl border border-[#61DAFB]/20 bg-[#0B162B] p-4 font-mono text-xs text-[#A8B0C0] shadow-xl shadow-[#0B162B]/20 sm:h-[42%] sm:w-[52%] sm:p-5">
+        <div className="absolute inset-[13%] rounded-4xl border border-[#FF8500]/20 bg-white/55 shadow-inner dark:bg-[#111D32]/70" />
+        <div className="absolute z-1 flex h-[38%] w-[48%] flex-col justify-between rounded-2xl border border-[#61DAFB]/20 bg-[#0B162B] p-4 font-mono text-xs text-[#A8B0C0] shadow-xl shadow-[#0B162B]/20 sm:h-[42%] sm:w-[52%] sm:p-5">
           <div className="flex items-center gap-1.5 border-b border-white/10 pb-3">
             <span className="h-2 w-2 rounded-full bg-[#FF8500]" />
             <span className="h-2 w-2 rounded-full bg-[#61DAFB]" />
@@ -70,7 +70,7 @@ export const IllustratedPortrait: React.FC<IllustratedPortraitProps> = ({
         <motion.div
           animate={reducedMotion ? undefined : { y: [0, -6, 0] }}
           transition={reducedMotion ? { duration: 0.2 } : floatTransition(5.2, 0.15)}
-          className="relative z-[2] flex h-[72%] w-[43%] items-end justify-center overflow-hidden rounded-[1.75rem] border-4 border-white/80 bg-[#F2F3F5] shadow-2xl shadow-[#0B162B]/20 dark:border-[#16233A] dark:bg-[#16233A] sm:h-[76%] sm:w-[46%]"
+          className="relative z-2 flex h-[72%] w-[43%] items-end justify-center overflow-hidden rounded-[1.75rem] border-4 border-white/80 bg-[#F2F3F5] shadow-2xl shadow-[#0B162B]/20 dark:border-[#16233A] dark:bg-[#16233A] sm:h-[76%] sm:w-[46%]"
         >
           <img
             src={portraitSrc}
@@ -108,11 +108,11 @@ export const IllustratedPortrait: React.FC<IllustratedPortraitProps> = ({
         className={`relative flex aspect-square w-full items-center justify-center ${className}`}
         aria-label="Animated contact and communication illustration"
       >
-        <div className="absolute inset-[9%] rounded-full bg-gradient-to-tr from-[#FF8500]/10 via-transparent to-[#61DAFB]/10 dark:from-[#111D32] dark:to-[#16233A]" />
+        <div className="absolute inset-[9%] rounded-full bg-linear-to-tr from-[#FF8500]/10 via-transparent to-[#61DAFB]/10 dark:from-[#111D32] dark:to-[#16233A]" />
         <motion.div
           animate={reducedMotion ? undefined : { y: [0, -8, 0], rotate: [-2, 2, -2] }}
           transition={reducedMotion ? { duration: 0.2 } : floatTransition(5, 0.2)}
-          className="absolute z-[1] flex h-[31%] w-[43%] items-center justify-center rounded-3xl border-4 border-white/80 bg-[#FF8500] text-white shadow-2xl shadow-[#0B162B]/20 dark:border-[#16233A]"
+          className="absolute z-1 flex h-[31%] w-[43%] items-center justify-center rounded-3xl border-4 border-white/80 bg-[#FF8500] text-white shadow-2xl shadow-[#0B162B]/20 dark:border-[#16233A]"
         >
           <Mail className="h-10 w-10 stroke-[1.4] sm:h-14 sm:w-14" />
           <span className="absolute inset-x-4 top-1/2 border-t border-white/40" />
@@ -120,7 +120,7 @@ export const IllustratedPortrait: React.FC<IllustratedPortraitProps> = ({
         <motion.div
           animate={reducedMotion ? undefined : { y: [0, -6, 0] }}
           transition={reducedMotion ? { duration: 0.2 } : floatTransition(5.4, 0.35)}
-          className="relative z-[2] flex h-[72%] w-[49%] items-end justify-center overflow-hidden rounded-[1.75rem] border-4 border-white/80 bg-[#F2F3F5] shadow-2xl shadow-[#0B162B]/20 dark:border-[#16233A] dark:bg-[#16233A]"
+          className="relative z-2 flex h-[72%] w-[49%] items-end justify-center overflow-hidden rounded-[1.75rem] border-4 border-white/80 bg-[#F2F3F5] shadow-2xl shadow-[#0B162B]/20 dark:border-[#16233A] dark:bg-[#16233A]"
         >
           <img
             src={portraitSrc}
@@ -146,13 +146,13 @@ export const IllustratedPortrait: React.FC<IllustratedPortraitProps> = ({
       className={`relative flex aspect-square w-full items-center justify-center ${className}`}
       aria-label="Aiza Humayun surrounded by developer-themed illustrations"
     >
-      <div className="absolute inset-[8%] rounded-full bg-gradient-to-tr from-[#FF8500]/10 via-transparent to-[#61DAFB]/10 dark:from-[#111D32] dark:via-[#16233A] dark:to-[#0B162B]" />
+      <div className="absolute inset-[8%] rounded-full bg-linear-to-tr from-[#FF8500]/10 via-transparent to-[#61DAFB]/10 dark:from-[#111D32] dark:via-[#16233A] dark:to-[#0B162B]" />
       <div className="absolute inset-[15%] rounded-full border border-[#FF8500]/15 dark:border-white/10" />
 
       <motion.div
         animate={reducedMotion ? undefined : { y: [0, -7, 0] }}
         transition={reducedMotion ? { duration: 0.2 } : floatTransition(5)}
-        className="relative z-[2] flex h-[80%] w-[57%] items-end justify-center overflow-hidden rounded-[2rem] border-4 border-white/80 bg-[#F2F3F5] shadow-2xl shadow-[#0B162B]/20 dark:border-[#16233A] dark:bg-[#16233A]"
+        className="relative z-2 flex h-[80%] w-[57%] items-end justify-center overflow-hidden rounded-4xl border-4 border-white/80 bg-[#F2F3F5] shadow-2xl shadow-[#0B162B]/20 dark:border-[#16233A] dark:bg-[#16233A]"
       >
         <img
           src={portraitSrc}

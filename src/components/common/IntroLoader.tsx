@@ -62,7 +62,7 @@ export const IntroLoader: React.FC<IntroLoaderProps> = ({ onFinish }) => {
         y: -16,
         transition: { duration: 0.5, ease: [0.65, 0, 0.35, 1] },
       }}
-      className="fixed inset-0 z-[99999] flex flex-col justify-between items-center bg-[#0B162B] text-white overflow-hidden select-none px-4 sm:px-8 py-6 sm:py-8 pointer-events-auto"
+      className="fixed inset-0 z-99999 flex flex-col justify-between items-center bg-[#0B162B] text-white overflow-hidden select-none px-4 sm:px-8 py-6 sm:py-8 pointer-events-auto"
     >
       {/* Top Bar: Minimalist Technical Identity */}
       <div className="w-full max-w-6xl flex items-center justify-between z-20 text-xs font-mono tracking-widest text-gray-400">
@@ -116,7 +116,7 @@ export const IntroLoader: React.FC<IntroLoaderProps> = ({ onFinish }) => {
       {/* Centerpiece: Primary Strip & Developer Title */}
       <div className="relative z-20 flex flex-col items-center justify-center my-auto w-full max-w-4xl px-2">
         {/* Top Horizontal Laser / Accent Line */}
-        <div className="w-full h-[1px] bg-white/10 relative overflow-hidden mb-6 sm:mb-8">
+        <div className="w-full h-px bg-white/10 relative overflow-hidden mb-6 sm:mb-8">
           <motion.div
             initial={{ x: '-100%' }}
             animate={{ x: '100%' }}
@@ -126,7 +126,7 @@ export const IntroLoader: React.FC<IntroLoaderProps> = ({ onFinish }) => {
               ease: 'easeInOut',
               delay: 0.2,
             }}
-            className="absolute top-0 left-0 w-48 sm:w-72 h-full bg-gradient-to-r from-transparent via-[#FF8500] to-transparent"
+            className="absolute top-0 left-0 w-48 sm:w-72 h-full bg-linear-to-r from-transparent via-[#FF8500] to-transparent"
           />
         </div>
 
@@ -137,7 +137,7 @@ export const IntroLoader: React.FC<IntroLoaderProps> = ({ onFinish }) => {
             initial={{ scaleX: 0, opacity: 0 }}
             animate={{ scaleX: 1, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="hidden sm:block origin-right flex-1 h-[2px] bg-gradient-to-r from-transparent via-[#FF8500]/40 to-[#FF8500]"
+            className="hidden sm:block origin-right flex-1 h-0.5 bg-linear-to-r from-transparent via-[#FF8500]/40 to-[#FF8500]"
           />
 
           {/* Masked Central Titles */}
@@ -182,12 +182,12 @@ export const IntroLoader: React.FC<IntroLoaderProps> = ({ onFinish }) => {
             initial={{ scaleX: 0, opacity: 0 }}
             animate={{ scaleX: 1, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="hidden sm:block origin-left flex-1 h-[2px] bg-gradient-to-l from-transparent via-[#FF8500]/40 to-[#FF8500]"
+            className="hidden sm:block origin-left flex-1 h-0.5 bg-linear-to-l from-transparent via-[#FF8500]/40 to-[#FF8500]"
           />
         </div>
 
         {/* Bottom Horizontal Laser / Accent Line */}
-        <div className="w-full h-[1px] bg-white/10 relative overflow-hidden mt-6 sm:mt-8">
+        <div className="w-full h-px bg-white/10 relative overflow-hidden mt-6 sm:mt-8">
           <motion.div
             initial={{ x: '100%' }}
             animate={{ x: '-100%' }}
@@ -197,7 +197,7 @@ export const IntroLoader: React.FC<IntroLoaderProps> = ({ onFinish }) => {
               ease: 'easeInOut',
               delay: 0.3,
             }}
-            className="absolute top-0 right-0 w-48 sm:w-72 h-full bg-gradient-to-r from-transparent via-[#FF8500] to-transparent"
+            className="absolute top-0 right-0 w-48 sm:w-72 h-full bg-linear-to-r from-transparent via-[#FF8500] to-transparent"
           />
         </div>
       </div>
