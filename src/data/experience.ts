@@ -6,7 +6,8 @@ export const experienceData: ExperienceItem[] = [
     role: 'Software Engineering Intern',
     company: 'Systems Limited',
     period: 'Jan 2026 – Jun 2026',
-    isCurrent: true,
+    isCurrent: false,
+    isRecent: true,
     responsibilities: [
       'Developed and maintained React-based features for enterprise business workflows using the MERN stack.',
       'Built reusable React components and integrated REST APIs to connect frontend interfaces with backend services.',
