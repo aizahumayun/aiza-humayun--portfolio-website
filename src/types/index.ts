@@ -58,6 +58,7 @@ export interface ExperienceItem {
   responsibilities: string[];
   technologies?: string[];
   isCurrent?: boolean;
+  isRecent?: boolean;
 }
 
 export interface ServiceItem {

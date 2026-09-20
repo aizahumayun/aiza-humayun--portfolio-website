@@ -37,10 +37,16 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience, inde
             )}
           </div>
 
-          {experience.isCurrent && (
+          {/* {experience.isCurrent && (
             <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
               Current
+            </span>
+          )} */}
+          {experience.isRecent && (
+            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              Recent
             </span>
           )}
         </div>
