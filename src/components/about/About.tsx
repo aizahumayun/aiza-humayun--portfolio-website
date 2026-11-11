@@ -1,28 +1,25 @@
-import React from 'react';
-import { motion } from 'motion/react';
-import { Button } from '../common/Button';
-import { IllustratedPortrait } from '../common/IllustratedPortrait';
+import React from "react";
+import { motion } from "motion/react";
+import { Button } from "../common/Button";
+import { IllustratedPortrait } from "../common/IllustratedPortrait";
 
 export const About: React.FC = () => {
   const stats = [
-    { value: '2025', label: 'BS Computer Science' },
-    { value: '~1 Year', label: 'Hands-on Experience' },
-    { value: '3', label: 'Selected Projects' },
+    { value: "2025", label: "BS Computer Science" },
+    { value: "~1 Year", label: "Hands-on Experience" },
+    { value: "9+", label: "Selected Projects" },
   ];
 
   const scrollToSkills = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
-    const target = document.getElementById('skills');
+    const target = document.getElementById("skills");
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+      target.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <section
-      id="about"
-      className="py-16 sm:py-24 relative overflow-hidden"
-    >
+    <section id="about" className="py-16 sm:py-24 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column (Character with Star & Tech Badges) */}
@@ -48,15 +45,20 @@ export const About: React.FC = () => {
 
             {/* Paragraph Description */}
             <p className="mt-4 sm:mt-5 text-sm sm:text-base text-gray-600 dark:text-[#A8B0C0] leading-relaxed font-normal max-w-xl">
-              I am a React and MERN Stack Developer with hands-on experience delivering
-              enterprise web applications, most recently as a Software Engineering Intern at Systems Limited.
-              With a solid foundation in React.js, TypeScript, Node.js, Express, and MongoDB,
-              I build component-based architectures with secure authentication, integrated REST APIs, and responsive design.
+              I am a React and MERN Stack Developer with professional experience
+              as a Software Engineering Intern at Systems Limited. I build
+              full-stack web applications using React.js, TypeScript, Node.js,
+              Express, and MongoDB, with a focus on component-based
+              architecture, secure authentication, REST API integration, and
+              responsive design. I also develop AI-powered applications,
+              integrating AI capabilities into practical software solutions.
             </p>
 
             <p className="mt-3 text-xs sm:text-sm text-gray-500 dark:text-[#A8B0C0]/90 leading-relaxed font-normal max-w-xl">
-              Graduate of Lahore College for Women University (BS CS 2021–2025) and holder of the
-              Meta Front-End Professional Certificate, passionate about clean code and Agile team collaboration.
+              I hold a BS in Computer Science from Lahore College for Women
+              University (2021–2025) and the Meta Front-End Professional
+              Certificate, with a focus on clean code, scalable solutions, and
+              collaborative software development.
             </p>
 
             {/* Statistics Row */}

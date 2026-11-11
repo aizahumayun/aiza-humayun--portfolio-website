@@ -1,17 +1,17 @@
-import React from 'react';
-import { motion } from 'motion/react';
-import { Download, Mail } from 'lucide-react';
-import { heroSocialLinks } from '../../data/socialLinks';
-import { SocialLinks } from '../common/SocialLinks';
-import { Button } from '../common/Button';
-import { IllustratedPortrait } from '../common/IllustratedPortrait';
+import React from "react";
+import { motion } from "motion/react";
+import { Download, Mail } from "lucide-react";
+import { heroSocialLinks } from "../../data/socialLinks";
+import { SocialLinks } from "../common/SocialLinks";
+import { Button } from "../common/Button";
+import { IllustratedPortrait } from "../common/IllustratedPortrait";
 
 export const Hero: React.FC = () => {
   const scrollToContact = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
-    const contactSection = document.getElementById('contact');
+    const contactSection = document.getElementById("contact");
     if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
+      contactSection.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -61,9 +61,10 @@ export const Hero: React.FC = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="mt-4 sm:mt-5 text-sm sm:text-base lg:text-lg text-gray-600 dark:text-[#A8B0C0] max-w-xl leading-relaxed font-normal"
             >
-              React and MERN Stack Developer focused on building responsive,
-              scalable, and high-performance web applications with clean
-              component architecture and seamless REST API integrations.
+              React and MERN Stack Developer building responsive, scalable web
+              applications and AI-powered solutions, with expertise in modern
+              frontend architecture, full-stack development, and seamless REST
+              API integration.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -76,7 +77,7 @@ export const Hero: React.FC = () => {
               <Button
                 variant="primary"
                 size="md"
-                href="public/assets/cv/Aiza-Humayun_MERN_DEV_CV.pdf"
+                href="public/assets/cv/Aiza-CV.pdf"
                 download="Aiza-Humayun-CV.pdf"
                 id="hero-download-cv-btn"
                 icon={<Download className="w-4 h-4" />}

@@ -1,14 +1,28 @@
-import React from 'react';
+import React from "react";
 
 interface ProjectThumbnailProps {
   type: string;
   title: string;
 }
 
-export const ProjectThumbnail: React.FC<ProjectThumbnailProps> = ({ type, title }) => {
+export const ProjectThumbnail: React.FC<ProjectThumbnailProps> = ({
+  type,
+  title,
+}) => {
+  // Display actual project screenshot if an image URL is provided
+  if (type.startsWith("/") || type.startsWith("http")) {
+    return (
+      <img
+        src={type}
+        alt={`${title} screenshot`}
+        className="w-full h-full object-cover object-top"
+      />
+    );
+  }
+
   switch (type) {
-    case 'dashboard':
-    case 'themeable-dashboard':
+    case "dashboard":
+    case "themeable-dashboard":
       return (
         <div className="w-full h-full bg-[#1A253A] flex flex-col p-3 overflow-hidden select-none">
           {/* Mock Browser Header with Light/Dark theme toggle indicator */}
@@ -67,7 +81,7 @@ export const ProjectThumbnail: React.FC<ProjectThumbnailProps> = ({ type, title 
         </div>
       );
 
-    case 'ecommerce':
+    case "ecommerce":
       return (
         <div className="w-full h-full bg-[#1A253A] flex flex-col p-3 overflow-hidden select-none">
           {/* Mock Browser Header */}
@@ -93,16 +107,22 @@ export const ProjectThumbnail: React.FC<ProjectThumbnailProps> = ({ type, title 
               </div>
               <div className="flex items-center justify-between">
                 <div className="h-4 w-12 bg-[#FF8500] rounded" />
-                <span className="text-[9px] text-emerald-400 font-bold">JWT AUTH</span>
+                <span className="text-[9px] text-emerald-400 font-bold">
+                  JWT AUTH
+                </span>
               </div>
             </div>
             <div className="col-span-1 space-y-2">
               <div className="h-11 bg-[#223049] rounded-lg p-1.5 flex items-center gap-1">
-                <div className="w-6 h-6 rounded bg-[#FF8500]/30 flex items-center justify-center text-[10px]">🛒</div>
+                <div className="w-6 h-6 rounded bg-[#FF8500]/30 flex items-center justify-center text-[10px]">
+                  🛒
+                </div>
                 <div className="h-2 w-8 bg-white/20 rounded" />
               </div>
               <div className="h-11 bg-[#223049] rounded-lg p-1.5 flex items-center gap-1">
-                <div className="w-6 h-6 rounded bg-emerald-500/30 flex items-center justify-center text-[10px]">💳</div>
+                <div className="w-6 h-6 rounded bg-emerald-500/30 flex items-center justify-center text-[10px]">
+                  💳
+                </div>
                 <div className="h-2 w-8 bg-white/20 rounded" />
               </div>
             </div>
@@ -110,8 +130,8 @@ export const ProjectThumbnail: React.FC<ProjectThumbnailProps> = ({ type, title 
         </div>
       );
 
-    case 'rehab-ai':
-    case 'rehabilitation':
+    case "rehab-ai":
+    case "rehabilitation":
       return (
         <div className="w-full h-full bg-[#0E1726] flex flex-col p-3 overflow-hidden select-none">
           <div className="flex items-center justify-between pb-2 border-b border-white/10">
@@ -120,12 +140,17 @@ export const ProjectThumbnail: React.FC<ProjectThumbnailProps> = ({ type, title 
               <div className="w-2 h-2 rounded-full bg-amber-500/80" />
               <div className="w-2 h-2 rounded-full bg-emerald-500/80" />
             </div>
-            <span className="text-[10px] text-cyan-400 font-mono tracking-wider">AI REHAB · CNN + RAG</span>
+            <span className="text-[10px] text-cyan-400 font-mono tracking-wider">
+              AI REHAB · CNN + RAG
+            </span>
           </div>
           <div className="flex items-center justify-around mt-2 h-24">
             {/* AI Severity Indicator Circle */}
             <div className="relative w-16 h-16 flex items-center justify-center">
-              <svg className="w-16 h-16 transform -rotate-90" viewBox="0 0 36 36">
+              <svg
+                className="w-16 h-16 transform -rotate-90"
+                viewBox="0 0 36 36"
+              >
                 <path
                   d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                   fill="none"
@@ -141,7 +166,9 @@ export const ProjectThumbnail: React.FC<ProjectThumbnailProps> = ({ type, title 
                 />
               </svg>
               <div className="absolute text-[8px] font-bold text-white text-center leading-none">
-                CNN<br/><span className="text-[#FF8500]">Model</span>
+                CNN
+                <br />
+                <span className="text-[#FF8500]">Model</span>
               </div>
             </div>
             <div className="space-y-1.5 flex-1 pl-4">
@@ -152,13 +179,15 @@ export const ProjectThumbnail: React.FC<ProjectThumbnailProps> = ({ type, title 
               <div className="h-1.5 w-full bg-cyan-400/40 rounded-full" />
               <div className="h-1.5 w-4/5 bg-[#FF8500]/60 rounded-full" />
               <div className="h-1.5 w-3/5 bg-purple-400/40 rounded-full" />
-              <div className="text-[9px] text-[#A8B0C0] font-mono mt-1">Flutter App Tracking</div>
+              <div className="text-[9px] text-[#A8B0C0] font-mono mt-1">
+                Flutter App Tracking
+              </div>
             </div>
           </div>
         </div>
       );
 
-    case 'fitness':
+    case "fitness":
       return (
         <div className="w-full h-full bg-[#0E1726] flex flex-col p-3 overflow-hidden select-none">
           <div className="flex items-center justify-between pb-2 border-b border-white/10">
@@ -167,12 +196,17 @@ export const ProjectThumbnail: React.FC<ProjectThumbnailProps> = ({ type, title 
               <div className="w-2 h-2 rounded-full bg-amber-500/80" />
               <div className="w-2 h-2 rounded-full bg-emerald-500/80" />
             </div>
-            <span className="text-[10px] text-cyan-400 font-mono">ACTIVITY TRACKER</span>
+            <span className="text-[10px] text-cyan-400 font-mono">
+              ACTIVITY TRACKER
+            </span>
           </div>
           <div className="flex items-center justify-around mt-2 h-24">
             {/* Activity rings */}
             <div className="relative w-16 h-16 flex items-center justify-center">
-              <svg className="w-16 h-16 transform -rotate-90" viewBox="0 0 36 36">
+              <svg
+                className="w-16 h-16 transform -rotate-90"
+                viewBox="0 0 36 36"
+              >
                 <path
                   d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                   fill="none"
@@ -187,7 +221,9 @@ export const ProjectThumbnail: React.FC<ProjectThumbnailProps> = ({ type, title 
                   strokeWidth="3.5"
                 />
               </svg>
-              <div className="absolute text-[9px] font-bold text-white">75%</div>
+              <div className="absolute text-[9px] font-bold text-white">
+                75%
+              </div>
             </div>
             <div className="space-y-1.5">
               <div className="h-2 w-20 bg-cyan-400/40 rounded-full" />
@@ -199,7 +235,7 @@ export const ProjectThumbnail: React.FC<ProjectThumbnailProps> = ({ type, title 
         </div>
       );
 
-    case 'ai-content':
+    case "ai-content":
       return (
         <div className="w-full h-full bg-[#141E33] flex flex-col p-3 overflow-hidden select-none">
           <div className="flex items-center justify-between pb-2 border-b border-white/10">
@@ -224,7 +260,7 @@ export const ProjectThumbnail: React.FC<ProjectThumbnailProps> = ({ type, title 
         </div>
       );
 
-    case 'crypto':
+    case "crypto":
       return (
         <div className="w-full h-full bg-[#0F172A] flex flex-col p-3 overflow-hidden select-none">
           <div className="flex items-center justify-between pb-2 border-b border-white/10">
@@ -233,7 +269,9 @@ export const ProjectThumbnail: React.FC<ProjectThumbnailProps> = ({ type, title 
               <div className="w-2 h-2 rounded-full bg-amber-500/80" />
               <div className="w-2 h-2 rounded-full bg-emerald-500/80" />
             </div>
-            <span className="text-[10px] text-emerald-400 font-mono">+18.4%</span>
+            <span className="text-[10px] text-emerald-400 font-mono">
+              +18.4%
+            </span>
           </div>
           <div className="mt-2 flex items-end justify-between h-24 px-2 pb-1">
             <div className="w-3 bg-cyan-500/40 rounded-t h-8" />
@@ -246,7 +284,7 @@ export const ProjectThumbnail: React.FC<ProjectThumbnailProps> = ({ type, title 
         </div>
       );
 
-    case 'task-mgmt':
+    case "task-mgmt":
       return (
         <div className="w-full h-full bg-[#182238] flex flex-col p-3 overflow-hidden select-none">
           <div className="flex items-center justify-between pb-2 border-b border-white/10">
@@ -275,7 +313,7 @@ export const ProjectThumbnail: React.FC<ProjectThumbnailProps> = ({ type, title 
         </div>
       );
 
-    case 'real-estate':
+    case "real-estate":
       return (
         <div className="w-full h-full bg-[#121B2F] flex flex-col p-3 overflow-hidden select-none">
           <div className="flex items-center justify-between pb-2 border-b border-white/10">

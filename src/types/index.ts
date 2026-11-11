@@ -1,16 +1,21 @@
 export type Theme = 'light' | 'dark';
 
+export type SkillCategory =
+  | 'Frontend Development'
+  | 'Backend Development'
+  | 'AI & Machine Learning'
+  | 'Tools & Platforms';
+
+export type SkillLevel = 'Core' | 'Proficient' | 'Working Knowledge';
+
 export interface Skill {
   id: string;
   name: string;
-  proficiency?: number;
-  category?: string;
-  level?: string;
+  category: SkillCategory;
+  level: SkillLevel;
   icon: string;
-  color?: string;
-  trackColor?: string;
 }
-
+type ProjectStatus = 'Completed' | 'In Development' | 'Planned';
 export interface Project {
   id: string;
   title: string;
@@ -20,6 +25,7 @@ export interface Project {
   githubUrl?: string;
   demoUrl?: string;
   badge?: string;
+  status?: ProjectStatus;
 }
 
 export interface SocialLink {

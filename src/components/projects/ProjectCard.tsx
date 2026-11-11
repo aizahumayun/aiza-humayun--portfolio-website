@@ -1,9 +1,9 @@
-import React from 'react';
-import { motion } from 'motion/react';
-import { Code, ExternalLink } from 'lucide-react';
-import type { Project } from '../../types';
-import { Button } from '../common/Button';
-import { ProjectThumbnail } from './ProjectThumbnail';
+import React from "react";
+import { motion } from "motion/react";
+import { Code, ExternalLink } from "lucide-react";
+import type { Project } from "../../types";
+import { Button } from "../common/Button";
+import { ProjectThumbnail } from "./ProjectThumbnail";
 
 interface ProjectCardProps {
   project: Project;
@@ -16,13 +16,31 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
       data-aos="fade-up"
       data-aos-delay={index * 80}
       whileHover={{ y: -6 }}
-      transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
       id={`project-card-${project.id}`}
       className="group rounded-2xl bg-white dark:bg-[#111D32] border border-gray-200/80 dark:border-white/10 overflow-hidden shadow-sm hover:shadow-xl dark:shadow-black/30 hover:border-[#FF8500]/40 dark:hover:border-[#FF8500]/40 transition-all duration-300 flex flex-col justify-between"
     >
       <div>
         {/* Project Thumbnail / Screenshot Container */}
         <div className="relative w-full aspect-[16/10] overflow-hidden bg-gray-100 dark:bg-[#16233A] border-b border-gray-100 dark:border-white/5">
+          {project.status && (
+            <span
+              className={`absolute top-3 left-3 z-10 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[10px] font-semibold tracking-wide backdrop-blur-md border ${
+                project.status === "In Development"
+                  ? "bg-amber-500/15 text-amber-600 dark:text-amber-400 border-amber-500/30"
+                  : "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-500/30"
+              }`}
+            >
+              <span
+                className={`w-1.5 h-1.5 rounded-full ${
+                  project.status === "In Development"
+                    ? "bg-amber-500"
+                    : "bg-emerald-500"
+                }`}
+              />
+              {project.status}
+            </span>
+          )}
           <motion.div
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
@@ -95,7 +113,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
           <Button
             variant="primary"
             size="sm"
-            href={project.githubUrl || 'https://github.com/aizahumayun'}
+            href={project.githubUrl || "https://github.com/aizahumayun"}
             target="_blank"
             rel="noopener noreferrer"
             icon={<Code className="w-3.5 h-3.5" />}
