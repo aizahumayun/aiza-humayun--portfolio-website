@@ -77,7 +77,7 @@ export const Hero: React.FC = () => {
               <Button
                 variant="primary"
                 size="md"
-                href="public/assets/cv/Aiza-CV.pdf"
+                href="/assets/cv/Aiza-CV.pdf"
                 download="Aiza-Humayun-CV.pdf"
                 id="hero-download-cv-btn"
                 icon={<Download className="w-4 h-4" />}
